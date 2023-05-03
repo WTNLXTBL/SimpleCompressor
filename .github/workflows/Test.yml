@@ -16,7 +16,7 @@ jobs:
     - name: Build
       run: |
         sudo apt update
-        sudo apt upgrade
+        sudo apt install clang zlib
         make
     - name: Test
       run: |
