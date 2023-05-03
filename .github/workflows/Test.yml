@@ -14,7 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: make
+      run: |
+        sudo apt update
+        sudo apt upgrade
+        make
     - name: Test
       run: |
        ./compressor -c compressor compressed.bin
